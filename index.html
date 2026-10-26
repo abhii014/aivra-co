@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aivra.co — Made to Shine, Just Like You ✨</title>
+  <meta name="description" content="Trendy, durable, affordable luxury 18K gold plated & stainless steel jewellery. Shipping all over Goa. Order direct via Instagram Concierge @aivra.co.">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            wine: {
+              DEFAULT: '#781926',
+              hover: '#5E111C',
+              light: '#F8ECEE',
+              subtle: 'rgba(120, 25, 38, 0.08)'
+            },
+            alabaster: {
+              DEFAULT: '#FBF6F0',
+              surface: '#F5EAE1',
+              dark: '#ECE0D6'
+            },
+            gold: {
+              DEFAULT: '#C5A059',
+              light: '#E8D3A7',
+              dark: '#8C6A28'
+            },
+            ink: {
+              DEFAULT: '#21191B',
+              muted: '#615658',
+              light: '#8E8284'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- External Smooth Scroll & Animation Libraries -->
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#FBF6F0] text-[#21191B] relative font-sans antialiased">
+
+  <!-- Film Grain Overlay -->
+  <div class="film-grain"></div>
+
+  <!-- Warm Ambient Glow Orbs -->
+  <div class="ambient-glow-rose top-[5%] left-[10%]"></div>
+  <div class="ambient-glow-gold top-[35%] right-[5%] opacity-60"></div>
+  <div class="ambient-glow-rose top-[70%] left-[20%] opacity-50"></div>
+
+  <!-- ========================================================================= -->
+  <!-- TOP BANNER (As seen in Figma) -->
+  <!-- ========================================================================= -->
+  <div class="w-full bg-[#781926] text-white text-[11px] font-mono py-1.5 px-4 text-center tracking-widest uppercase flex items-center justify-center gap-3">
+    <span>✨ Shipping All Over Goa • 18K Gold Plated & Stainless Steel • Made to Shine</span>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN NAVIGATION BAR -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-50 px-4 md:px-8 py-3.5 bg-[#FBF6F0]/90 backdrop-blur-md border-b border-[#781926]/10 transition-all">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" data-page-target="home" class="group flex items-center gap-2">
+        <span class="font-serif-luxury text-2xl font-bold tracking-[0.18em] text-[#21191B] group-hover:text-[#781926] transition-colors">aivra.co</span>
+      </a>
+
+      <!-- Center Navigation Links (Exact from Figma Screenshots) -->
+      <nav class="hidden md:flex items-center gap-8 text-xs font-mono tracking-wider text-[#615658]">
+        <button data-nav-btn="home" class="nav-active text-[#781926] font-bold border-b border-[#781926] pb-0.5 transition-colors">Home</button>
+        <button data-nav-btn="collections" class="hover:text-[#781926] transition-colors">Collections</button>
+        <button data-nav-btn="reviews" class="hover:text-[#781926] transition-colors">Reviews</button>
+        <button data-nav-btn="about" class="hover:text-[#781926] transition-colors">About</button>
+      </nav>
+
+      <!-- Right Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Sound Toggle -->
+        <button id="sound-toggle" class="p-2 rounded-full hover:bg-black/5 text-[#781926] transition-all" title="Toggle Ambient Audio">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.536 8.464a5 5 0 010 7.072M18.364 5.636a9 9 0 010 12.728M11 5L6 9H2v6h4l5 4V5z"/></svg>
+        </button>
+
+        <!-- Instagram Direct Button -->
+        <a href="https://instagram.com/aivra.co" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-[#781926]/15 text-xs font-mono text-[#21191B] hover:text-[#781926] transition-all shadow-sm" title="Instagram Concierge @aivra.co">
+          <svg class="w-3.5 h-3.5 text-[#781926]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <span>@aivra.co</span>
+        </a>
+
+        <!-- Concierge Bag / Instagram DM Trigger -->
+        <button data-cart-toggle class="relative p-2 rounded-full hover:bg-black/5 text-[#21191B] transition-all" title="View Bag">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <span data-cart-count class="absolute top-1 right-1 w-4 h-4 rounded-full bg-[#781926] text-white text-[10px] flex items-center justify-center font-bold">1</span>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- PAGE VIEW: HOME PAGE (Screenshot 1 & 2) -->
+  <!-- ========================================================================= -->
+  <div id="page-home" class="page-view">
+    
+    <!-- Hero Section -->
+    <section class="py-12 md:py-20 px-4 md:px-8 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-5 space-y-6">
+          <p class="text-xs font-mono uppercase tracking-[0.25em] text-[#781926] font-semibold">
+            JEWELLERY FOR YOUR EVERYDAY STORY
+          </p>
+          <h1 class="font-serif-luxury text-4xl sm:text-5xl md:text-6xl text-[#21191B] leading-[1.08] font-bold">
+            Made to Shine,<br>
+            <span class="text-[#781926] italic font-normal">Just Like You ✨</span>
+          </h1>
+          <p class="text-sm text-[#615658] font-light leading-relaxed max-w-md">
+            Trendy • Durable • Affordable Luxury<br>
+            Gold Plated & Stainless Steel Jewellery
+          </p>
+          <div>
+            <button data-nav-btn="collections" class="btn-wine px-7 py-3.5 rounded-full font-mono text-xs uppercase tracking-wider font-semibold inline-flex items-center gap-2 shadow-lg">
+              <span>Shop Collection</span>
+              <span>→</span>
+            </button>
+          </div>
+
+          <!-- Feature 3-Pill Under Hero -->
+          <div class="grid grid-cols-3 gap-3 pt-6 border-t border-[#781926]/15 text-center text-xs font-mono text-[#615658]">
+            <div class="space-y-1">
+              <span class="text-base block">💎</span>
+              <p class="text-[11px] font-bold text-[#21191B]">18K Gold Plated</p>
+            </div>
+            <div class="space-y-1">
+              <span class="text-base block">🛡️</span>
+              <p class="text-[11px] font-bold text-[#21191B]">Stainless Steel</p>
+            </div>
+            <div class="space-y-1">
+              <span class="text-base block">📦</span>
+              <p class="text-[11px] font-bold text-[#21191B]">Shipping All Over Goa</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Stage on Travertine Stone -->
+        <div class="lg:col-span-7">
+          <div id="hero-stage" class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-[#781926]/15 group cursor-crosshair">
+            <div id="caustic-spotlight" class="spotlight-caustic"></div>
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1200&q=85" alt="Heart pendant necklace on travertine stone" class="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-700" />
+            
+            <!-- Handwritten Doodle Tag Overlay -->
+            <div class="absolute bottom-6 right-6 px-4 py-2 rounded-2xl bg-white/80 backdrop-blur-md border border-[#781926]/20 text-[#781926] font-serif italic text-sm shadow-md">
+              With Double Layer Sparkle ♡
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Category Circles Section (Explore by Category) -->
+    <section class="py-12 px-4 md:px-8 max-w-7xl mx-auto border-t border-[#781926]/10">
+      <div class="grid grid-cols-3 sm:grid-cols-6 gap-6 text-center">
+        <div class="category-item group cursor-pointer" data-category="necklaces">
+          <div class="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-full overflow-hidden border-2 border-[#781926]/15 group-hover:border-[#781926] transition-all shadow-md">
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=300&q=80" alt="Necklaces" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+          </div>
+          <span class="font-serif-luxury text-xs md:text-sm font-semibold text-[#21191B] mt-2 block group-hover:text-[#781926]">Necklaces</span>
+        </div>
+
+        <div class="category-item group cursor-pointer" data-category="earrings">
+          <div class="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-full overflow-hidden border-2 border-[#781926]/15 group-hover:border-[#781926] transition-all shadow-md">
+            <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=300&q=80" alt="Earrings" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+          </div>
+          <span class="font-serif-luxury text-xs md:text-sm font-semibold text-[#21191B] mt-2 block group-hover:text-[#781926]">Earrings</span>
+        </div>
+
+        <div class="category-item group cursor-pointer" data-category="bracelets">
+          <div class="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-full overflow-hidden border-2 border-[#781926]/15 group-hover:border-[#781926] transition-all shadow-md">
+            <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=300&q=80" alt="Bracelets" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+          </div>
+          <span class="font-serif-luxury text-xs md:text-sm font-semibold text-[#21191B] mt-2 block group-hover:text-[#781926]">Bracelets</span>
+        </div>
+
+        <div class="category-item group cursor-pointer" data-category="rings">
+          <div class="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-full overflow-hidden border-2 border-[#781926]/15 group-hover:border-[#781926] transition-all shadow-md">
+            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=300&q=80" alt="Rings" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+          </div>
+          <span class="font-serif-luxury text-xs md:text-sm font-semibold text-[#21191B] mt-2 block group-hover:text-[#781926]">Rings</span>
+        </div>
+
+        <div class="category-item group cursor-pointer" data-category="sets">
+          <div class="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-full overflow-hidden border-2 border-[#781926]/15 group-hover:border-[#781926] transition-all shadow-md">
+            <img src="https://images.unsplash.com/photo-1611591475155-4284ec289e0d?auto=format&fit=crop&w=300&q=80" alt="Sets" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+          </div>
+          <span class="font-serif-luxury text-xs md:text-sm font-semibold text-[#21191B] mt-2 block group-hover:text-[#781926]">Sets</span>
+        </div>
+
+        <div class="category-item group cursor-pointer" data-category="gifts">
+          <div class="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-full overflow-hidden border-2 border-[#781926]/15 group-hover:border-[#781926] transition-all shadow-md">
+            <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=300&q=80" alt="Gift Box" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+          </div>
+          <span class="font-serif-luxury text-xs md:text-sm font-semibold text-[#21191B] mt-2 block group-hover:text-[#781926]">Gift Box</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Story Section (Jewellery for Real Moments ♡) -->
+    <section class="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-white p-8 md:p-12 rounded-3xl border border-[#781926]/10 shadow-sm">
+        
+        <!-- Left: Velvet Box Video/Image with Play Button -->
+        <div class="lg:col-span-6 relative aspect-square rounded-2xl overflow-hidden group shadow-md">
+          <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=85" alt="Aivra pink velvet packaging" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-[#781926]/30 flex items-center justify-center">
+            <button class="w-16 h-16 rounded-full bg-white/90 text-[#781926] flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Story Copy & 4 Badges -->
+        <div class="lg:col-span-6 space-y-6">
+          <p class="text-xs font-mono uppercase tracking-[0.25em] text-[#781926] font-semibold">OUR STORY</p>
+          <h2 class="font-serif-luxury text-3xl md:text-4xl text-[#21191B] font-bold">
+            Jewellery for<br>
+            <span class="text-[#781926] italic font-normal">Real Moments ♡</span>
+          </h2>
+          <p class="text-sm text-[#615658] leading-relaxed">
+            Aivra is all about pieces that feel personal, stylish and effortless. We create trendy, high-quality, gold plated and stainless steel jewellery that fits your everyday moments — from casual days to special ones.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 pt-4">
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-[#FBF6F0] border border-[#781926]/10">
+              <span class="text-xl text-[#781926]">♡</span>
+              <div>
+                <p class="text-xs font-bold text-[#21191B]">Trendy Designs</p>
+                <p class="text-[10px] text-[#615658]">Everyday modern aesthetic</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-[#FBF6F0] border border-[#781926]/10">
+              <span class="text-xl text-[#781926]">★</span>
+              <div>
+                <p class="text-xs font-bold text-[#21191B]">High Quality</p>
+                <p class="text-[10px] text-[#615658]">18K plating & steel</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-[#FBF6F0] border border-[#781926]/10">
+              <span class="text-xl text-[#781926]">🌿</span>
+              <div>
+                <p class="text-xs font-bold text-[#21191B]">Skin Friendly</p>
+                <p class="text-[10px] text-[#615658]">Hypoallergenic comfort</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-[#FBF6F0] border border-[#781926]/10">
+              <span class="text-xl text-[#781926]">🎁</span>
+              <div>
+                <p class="text-xs font-bold text-[#21191B]">Perfect for Gifting</p>
+                <p class="text-[10px] text-[#615658]">Signature velvet boxes</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <button data-nav-btn="about" class="btn-wine px-6 py-3 rounded-full font-mono text-xs uppercase tracking-wider font-semibold inline-flex items-center gap-2">
+              <span>More About Us</span>
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Customer Favourites / Bestsellers Section (Exact 5 Products from Figma) -->
+    <section class="py-16 px-4 md:px-8 max-w-7xl mx-auto border-t border-[#781926]/10">
+      <div class="flex items-end justify-between mb-8">
+        <div>
+          <p class="text-xs font-mono uppercase tracking-[0.25em] text-[#781926] font-semibold">CUSTOMER FAVOURITES</p>
+          <h2 class="font-serif-luxury text-3xl font-bold text-[#21191B] mt-1">Bestsellers ✨</h2>
+        </div>
+        <button data-nav-btn="collections" class="text-xs font-mono text-[#781926] hover:underline font-bold flex items-center gap-1">
+          <span>View All</span>
+          <span>→</span>
+        </button>
+      </div>
+
+      <!-- 5 Exact Product Cards from Screenshot -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        
+        <!-- Product 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#781926]/12 shadow-sm flex flex-col justify-between group">
+          <div class="relative aspect-square overflow-hidden bg-[#F5EAE1]">
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=500&q=80" alt="Heart Pendant Necklace" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <button class="absolute top-3 right-3 w-7 h-7 rounded-full bg-white/80 text-[#781926] flex items-center justify-center text-xs shadow-sm">♡</button>
+          </div>
+          <div class="p-3.5 space-y-2">
+            <h3 class="text-xs font-serif-luxury font-bold text-[#21191B] truncate">Heart Pendant Necklace</h3>
+            <p class="text-xs font-mono font-bold text-[#781926]">₹499</p>
+            <button data-action="quick-add" data-id="p-heart" class="w-full py-2 rounded-xl bg-[#F8ECEE] hover:bg-[#781926] text-[#781926] hover:text-white font-mono text-[11px] font-bold transition-all">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#781926]/12 shadow-sm flex flex-col justify-between group">
+          <div class="relative aspect-square overflow-hidden bg-[#F5EAE1]">
+            <img src="https://images.unsplash.com/photo-1611591475155-4284ec289e0d?auto=format&fit=crop&w=500&q=80" alt="Minimal Bow Necklace" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <button class="absolute top-3 right-3 w-7 h-7 rounded-full bg-white/80 text-[#781926] flex items-center justify-center text-xs shadow-sm">♡</button>
+          </div>
+          <div class="p-3.5 space-y-2">
+            <h3 class="text-xs font-serif-luxury font-bold text-[#21191B] truncate">Minimal Bow Necklace</h3>
+            <p class="text-xs font-mono font-bold text-[#781926]">₹449</p>
+            <button data-action="quick-add" data-id="p-bow" class="w-full py-2 rounded-xl bg-[#F8ECEE] hover:bg-[#781926] text-[#781926] hover:text-white font-mono text-[11px] font-bold transition-all">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#781926]/12 shadow-sm flex flex-col justify-between group">
+          <div class="relative aspect-square overflow-hidden bg-[#F5EAE1]">
+            <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=500&q=80" alt="Pearl Charm Bracelet" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <button class="absolute top-3 right-3 w-7 h-7 rounded-full bg-white/80 text-[#781926] flex items-center justify-center text-xs shadow-sm">♡</button>
+          </div>
+          <div class="p-3.5 space-y-2">
+            <h3 class="text-xs font-serif-luxury font-bold text-[#21191B] truncate">Pearl Charm Bracelet</h3>
+            <p class="text-xs font-mono font-bold text-[#781926]">₹599</p>
+            <button data-action="quick-add" data-id="p-pearl" class="w-full py-2 rounded-xl bg-[#F8ECEE] hover:bg-[#781926] text-[#781926] hover:text-white font-mono text-[11px] font-bold transition-all">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#781926]/12 shadow-sm flex flex-col justify-between group">
+          <div class="relative aspect-square overflow-hidden bg-[#F5EAE1]">
+            <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=500&q=80" alt="Floral Drop Earrings" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <button class="absolute top-3 right-3 w-7 h-7 rounded-full bg-white/80 text-[#781926] flex items-center justify-center text-xs shadow-sm">♡</button>
+          </div>
+          <div class="p-3.5 space-y-2">
+            <h3 class="text-xs font-serif-luxury font-bold text-[#21191B] truncate">Floral Drop Earrings</h3>
+            <p class="text-xs font-mono font-bold text-[#781926]">₹399</p>
+            <button data-action="quick-add" data-id="p-floral" class="w-full py-2 rounded-xl bg-[#F8ECEE] hover:bg-[#781926] text-[#781926] hover:text-white font-mono text-[11px] font-bold transition-all">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#781926]/12 shadow-sm flex flex-col justify-between group">
+          <div class="relative aspect-square overflow-hidden bg-[#F5EAE1]">
+            <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=500&q=80" alt="Initial Necklace" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <button class="absolute top-3 right-3 w-7 h-7 rounded-full bg-white/80 text-[#781926] flex items-center justify-center text-xs shadow-sm">♡</button>
+          </div>
+          <div class="p-3.5 space-y-2">
+            <h3 class="text-xs font-serif-luxury font-bold text-[#21191B] truncate">Initial Necklace</h3>
+            <p class="text-xs font-mono font-bold text-[#781926]">₹469</p>
+            <button data-action="quick-add" data-id="p-initial" class="w-full py-2 rounded-xl bg-[#F8ECEE] hover:bg-[#781926] text-[#781926] hover:text-white font-mono text-[11px] font-bold transition-all">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- New Collection Banner (Little Charms, Big Feelings) -->
+    <section class="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-12 rounded-3xl overflow-hidden bg-[#F5EAE1] border border-[#781926]/10 shadow-lg">
+        <div class="md:col-span-6 relative aspect-[4/3] md:aspect-auto">
+          <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=85" alt="Model wearing double layer necklace" class="w-full h-full object-cover" />
+          <div class="absolute bottom-4 left-4 px-3 py-1.5 rounded-xl bg-white/80 backdrop-blur-md text-[#781926] font-serif italic text-xs">
+            Everyday Looks Brighter ♡
+          </div>
+        </div>
+        <div class="md:col-span-6 p-8 md:p-14 flex flex-col justify-center space-y-4">
+          <p class="text-xs font-mono uppercase tracking-[0.25em] text-[#781926] font-semibold">NEW COLLECTION</p>
+          <h2 class="font-serif-luxury text-3xl md:text-4xl text-[#21191B] font-bold">
+            Little Charms,<br>
+            <span class="text-[#781926] italic font-normal">Big Feelings</span>
+          </h2>
+          <p class="text-sm text-[#615658] leading-relaxed">
+            Explore our latest designs made for your everyday aesthetic.
+          </p>
+          <div class="pt-2">
+            <button data-nav-btn="collections" class="btn-wine px-7 py-3 rounded-full font-mono text-xs uppercase tracking-wider font-semibold">
+              Shop New Arrivals →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- As Seen on Instagram Grid (Real People, Real Moments) -->
+    <section class="py-16 px-4 md:px-8 max-w-7xl mx-auto border-t border-[#781926]/10">
+      <div class="flex items-end justify-between mb-8">
+        <div>
+          <p class="text-xs font-mono uppercase tracking-[0.25em] text-[#781926] font-semibold">AS SEEN ON INSTAGRAM</p>
+          <h2 class="font-serif-luxury text-3xl font-bold text-[#21191B] mt-1">Real People, Real Moments ♡</h2>
+        </div>
+        <a href="https://instagram.com/aivra.co" target="_blank" class="text-xs font-mono text-[#781926] hover:underline font-bold flex items-center gap-1">
+          <span>Follow Us ↗</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+        <div class="aspect-square rounded-2xl overflow-hidden border border-[#781926]/10 shadow-sm relative group">
+          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=400&q=80" alt="Instagram Look 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute bottom-2 left-2 text-[10px] font-mono text-white/90 bg-black/40 px-2 py-0.5 rounded-full">@aivra.co</div>
+        </div>
+        <div class="aspect-square rounded-2xl overflow-hidden border border-[#781926]/10 shadow-sm relative group">
+          <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=400&q=80" alt="Instagram Look 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        </div>
+        <div class="aspect-square rounded-2xl overflow-hidden border border-[#781926]/10 shadow-sm relative group">
+          <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=400&q=80" alt="Instagram Look 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        </div>
+        <div class="aspect-square rounded-2xl overflow-hidden border border-[#781926]/10 shadow-sm relative group">
+          <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=400&q=80" alt="Instagram Look 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute bottom-2 left-2 text-[10px] font-mono text-white/90 bg-black/40 px-2 py-0.5 rounded-full">Golden Finish ♡</div>
+        </div>
+        <div class="aspect-square rounded-2xl overflow-hidden border border-[#781926]/10 shadow-sm relative group">
+          <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=400&q=80" alt="Instagram Look 5" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Loved by 1,900+ People (Reviews Slider) -->
+    <section class="py-16 px-4 md:px-8 max-w-7xl mx-auto border-t border-[#781926]/10">
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <p class="text-xs font-mono uppercase tracking-[0.25em] text-[#781926] font-semibold">WHAT OUR CUSTOMERS SAY</p>
+        <h2 class="font-serif-luxury text-3xl font-bold text-[#21191B] mt-1">Loved by 1,900+ People ♡</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Review 1 -->
+        <div class="bg-white p-6 rounded-2xl border border-[#781926]/10 shadow-sm space-y-4">
+          <div class="text-[#D4AF37] text-sm">★★★★★</div>
+          <p class="text-xs text-[#615658] leading-relaxed italic">
+            "The quality is amazing and the designs are so pretty! I wear mine everyday."
+          </p>
+          <div class="flex items-center gap-3 pt-2 border-t border-black/5">
+            <div class="w-8 h-8 rounded-full bg-[#781926]/10 text-[#781926] flex items-center justify-center font-bold text-xs">R</div>
+            <div>
+              <p class="text-xs font-bold text-[#21191B]">Riya S.</p>
+              <p class="text-[10px] text-[#781926]">Verified Buyer</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white p-6 rounded-2xl border border-[#781926]/10 shadow-sm space-y-4">
+          <div class="text-[#D4AF37] text-sm">★★★★★</div>
+          <p class="text-xs text-[#615658] leading-relaxed italic">
+            "Super cute packaging and such trendy pieces. Totally in love!"
+          </p>
+          <div class="flex items-center gap-3 pt-2 border-t border-black/5">
+            <div class="w-8 h-8 rounded-full bg-[#781926]/10 text-[#781926] flex items-center justify-center font-bold text-xs">M</div>
+            <div>
+              <p class="text-xs font-bold text-[#21191B]">Manya K.</p>
+              <p class="text-[10px] text-[#781926]">Verified Buyer</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white p-6 rounded-2xl border border-[#781926]/10 shadow-sm space-y-4">
+          <div class="text-[#D4AF37] text-sm">★★★★★</div>
+          <p class="text-xs text-[#615658] leading-relaxed italic">
+            "Perfect for gifting! Affordable and high quality."
+          </p>
+          <div class="flex items-center gap-3 pt-2 border-t border-black/5">
+            <div class="w-8 h-8 rounded-full bg-[#781926]/10 text-[#781926] flex items-center justify-center font-bold text-xs">S</div>
+            <div>
+              <p class="text-xs font-bold text-[#21191B]">Sneha P.</p>
+              <p class="text-[10px] text-[#781926]">Verified Buyer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- PAGE VIEW: OUR COLLECTIONS (Screenshot 3 & 4) -->
+  <!-- ========================================================================= -->
+  <div id="page-collections" class="page-view hidden">
+    
+    <!-- Collections Hero -->
+    <section class="py-12 md:py-16 px-4 md:px-8 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-5 space-y-4">
+          <p class="text-xs font-mono uppercase tracking-[0.25em] text-[#781926] font-semibold">CURATED WITH LOVE</p>
+          <h1 class="font-serif-luxury text-4xl sm:text-5xl text-[#21191B] font-bold">
+            Our Collections ✨
+          </h1>
+          <p class="text-sm text-[#615658] leading-relaxed">
+            Different styles, same sparkle. Explore our thoughtfully curated collections made for every version of you.
+          </p>
+          <button class="btn-wine px-7 py-3 rounded-full font-mono text-xs uppercase tracking-wider font-semibold">
+            Shop All →
+          </button>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-xl border border-[#781926]/15">
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1200&q=85" alt="Curated Collections" class="w-full h-full object-cover" />
+            <div class="absolute bottom-4 right-4 px-4 py-2 rounded-xl bg-white/80 backdrop-blur-md text-[#781926] font-serif italic text-xs shadow-md">
+              Different Stories, Same Sparkle ♡
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Badges Bar from Collections Screenshot -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-6 border-t border-[#781926]/15 text-center text-xs font-mono">
+        <div class="bg-white p-3 rounded-xl border border-[#781926]/10">
+          <span class="text-lg block">💎</span>
+          <p class="font-bold text-[#21191B] mt-1">18K Gold Plated</p>
+          <p class="text-[10px] text-[#615658]">Long-lasting shine</p>
+        </div>
+        <div class="bg-white p-3 rounded-xl border border-[#781926]/10">
+          <span class="text-lg block">🛡️</span>
+          <p class="font-bold text-[#21191B] mt-1">Skin Friendly</p>
+          <p class="text-[10px] text-[#615658]">Comfort for everyday wear</p>
+        </div>
+        <div class="bg-white p-3 rounded-xl border border-[#781926]/10">
+          <span class="text-lg block">🎁</span>
+          <p class="font-bold text-[#21191B] mt-1">Perfect for Gifting</p>
+          <p class="text-[10px] text-[#615658]">Thoughtful & elegant</p>
+        </div>
+        <div class="bg-white p-3 rounded-xl border border-[#781926]/10">
+          <span class="text-lg block">📦</span>
+          <p class="font-bold text-[#21191B] mt-1">Shipping All Over Goa</p>
+          <p class="text-[10px] text-[#615658]">Fast and reliable</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore by Style / 6 Big Collection Cards -->
+    <section class="py-12 px-4 md:px-8 max-w-7xl mx-auto border-t border-[#781926]/10">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+        <div>
+          <p class="text-xs font-mono uppercase tracking-[0.25em] text-[#781926] font-semibold">EXPLORE BY STYLE</p>
+          <h2 class="font-serif-luxury text-3xl font-bold text-[#21191B] mt-1">Collections ♡</h2>
+        </div>
+        <p class="text-xs text-[#615658] max-w-sm">
+          From minimal everyday pieces to bold statement designs, find the collection that feels like you.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Card 1: Necklaces -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#781926]/12 shadow-sm p-4 space-y-3 group cursor-pointer">
+          <div class="aspect-[16/10] rounded-xl overflow-hidden bg-[#F5EAE1]">
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" alt="Necklaces" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif-luxury text-lg font-bold text-[#21191B]">Necklaces</h3>
+            <span class="text-[11px] font-mono text-[#615658]">24+ Products</span>
+          </div>
+          <p class="text-xs text-[#615658] leading-relaxed">Everyday necklaces, layered chains and meaningful pendants.</p>
+          <div class="pt-1 flex justify-end">
+            <span class="w-7 h-7 rounded-full bg-[#F8ECEE] text-[#781926] flex items-center justify-center text-xs group-hover:bg-[#781926] group-hover:text-white transition-colors">→</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Earrings -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#781926]/12 shadow-sm p-4 space-y-3 group cursor-pointer">
+          <div class="aspect-[16/10] rounded-xl overflow-hidden bg-[#F5EAE1]">
+            <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=600&q=80" alt="Earrings" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif-luxury text-lg font-bold text-[#21191B]">Earrings</h3>
+            <span class="text-[11px] font-mono text-[#615658]">28+ Products</span>
+          </div>
+          <p class="text-xs text-[#615658] leading-relaxed">Studs, hoops, drops and more to complement your style.</p>
+          <div class="pt-1 flex justify-end">
+            <span class="w-7 h-7 rounded-full bg-[#F8ECEE] text-[#781926] flex items-center justify-center text-xs group-hover:bg-[#781926] group-hover:text-white transition-colors">→</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Bracelets -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#781926]/12 shadow-sm p-4 space-y-3 group cursor-pointer">
+          <div class="aspect-[16/10] rounded-xl overflow-hidden bg-[#F5EAE1]">
+            <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=600&q=80" alt="Bracelets" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif-luxury text-lg font-bold text-[#21191B]">Bracelets</h3>
+            <span class="text-[11px] font-mono text-[#615658]">14+ Products</span>
+          </div>
+          <p class="text-xs text-[#615658] leading-relaxed">Dainty bracelets for everyday sparkle and special moments.</p>
+          <div class="pt-1 flex justify-end">
+            <span class="w-7 h-7 rounded-full bg-[#F8ECEE] text-[#781926] flex items-center justify-center text-xs group-hover:bg-[#781926] group-hover:text-white transition-colors">→</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Rings -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#781926]/12 shadow-sm p-4 space-y-3 group cursor-pointer">
+          <div class="aspect-[16/10] rounded-xl overflow-hidden bg-[#F5EAE1]">
+            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80" alt="Rings" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif-luxury text-lg font-bold text-[#21191B]">Rings</h3>
+            <span class="text-[11px] font-mono text-[#615658]">8+ Products</span>
+          </div>
+          <p class="text-xs text-[#615658] leading-relaxed">Minimal, trendy and statement rings for every mood.</p>
+          <div class="pt-1 flex justify-end">
+            <span class="w-7 h-7 rounded-full bg-[#F8ECEE] text-[#781926] flex items-center justify-center text-xs group-hover:bg-[#781926] group-hover:text-white transition-colors">→</span>
+          </div>
+        </div>
+
+        <!-- Card 5: Sets -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#781926]/12 shadow-sm p-4 space-y-3 group cursor-pointer">
+          <div class="aspect-[16/10] rounded-xl overflow-hidden bg-[#F5EAE1]">
+            <img src="https://images.unsplash.com/photo-1611591475155-4284ec289e0d?auto=format&fit=crop&w=600&q=80" alt="Sets" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif-luxury text-lg font-bold text-[#21191B]">Sets</h3>
+            <span class="text-[11px] font-mono text-[#615658]">10+ Products</span>
+          </div>
+          <p class="text-xs text-[#615658] leading-relaxed">Perfectly paired pieces, made to match effortlessly.</p>
+          <div class="pt-1 flex justify-end">
+            <span class="w-7 h-7 rounded-full bg-[#F8ECEE] text-[#781926] flex items-center justify-center text-xs group-hover:bg-[#781926] group-hover:text-white transition-colors">→</span>
+          </div>
+        </div>
+
+        <!-- Card 6: Gift Boxes -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#781926]/12 shadow-sm p-4 space-y-3 group cursor-pointer">
+          <div class="aspect-[16/10] rounded-xl overflow-hidden bg-[#F5EAE1]">
+            <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80" alt="Gift Boxes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif-luxury text-lg font-bold text-[#21191B]">Gift Boxes</h3>
+            <span class="text-[11px] font-mono text-[#615658]">6+ Products</span>
+          </div>
+          <p class="text-xs text-[#615658] leading-relaxed">Beautifully packed and ready to make someone's day special.</p>
+          <div class="pt-1 flex justify-end">
+            <span class="w-7 h-7 rounded-full bg-[#F8ECEE] text-[#781926] flex items-center justify-center text-xs group-hover:bg-[#781926] group-hover:text-white transition-colors">→</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Collections for Every Moment (4 Lifestyle Cards) -->
+    <section class="py-12 px-4 md:px-8 max-w-7xl mx-auto border-t border-[#781926]/10">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+        <div>
+          <h2 class="font-serif-luxury text-3xl font-bold text-[#21191B]">Collections for Every Moment ✨</h2>
+          <p class="text-xs text-[#615658] mt-1">Whether it's a casual day out, a special celebration, or a gift for someone you love — we have a collection for it.</p>
+        </div>
+        <button class="text-xs font-mono text-[#781926] hover:underline font-bold">Explore All Collections →</button>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="relative aspect-[3/4] rounded-2xl overflow-hidden group shadow-md cursor-pointer">
+          <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=500&q=80" alt="Everyday Essentials" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4 text-white">
+            <h4 class="font-serif-luxury text-sm font-bold">Everyday Essentials</h4>
+            <p class="text-[10px] text-white/80">Minimal pieces for your daily glow.</p>
+          </div>
+        </div>
+
+        <div class="relative aspect-[3/4] rounded-2xl overflow-hidden group shadow-md cursor-pointer">
+          <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=500&q=80" alt="Trendy Picks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4 text-white">
+            <h4 class="font-serif-luxury text-sm font-bold">Trendy Picks</h4>
+            <p class="text-[10px] text-white/80">Style that keeps up with you.</p>
+          </div>
+        </div>
+
+        <div class="relative aspect-[3/4] rounded-2xl overflow-hidden group shadow-md cursor-pointer">
+          <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=500&q=80" alt="Gifting Made Easy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4 text-white">
+            <h4 class="font-serif-luxury text-sm font-bold">Gifting Made Easy</h4>
+            <p class="text-[10px] text-white/80">Thoughtful pieces for special people.</p>
+          </div>
+        </div>
+
+        <div class="relative aspect-[3/4] rounded-2xl overflow-hidden group shadow-md cursor-pointer">
+          <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=500&q=80" alt="Complete Looks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4 text-white">
+            <h4 class="font-serif-luxury text-sm font-bold">Complete Looks</h4>
+            <p class="text-[10px] text-white/80">Perfectly paired sets for every occasion.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- PAGE VIEW: REVIEWS (Screenshot 5) -->
+  <!-- ========================================================================= -->
+  <div id="page-reviews" class="page-view hidden">
+    
+    <!-- Reviews Header Banner -->
+    <section class="py-12 md:py-16 px-4 md:px-8 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-5 space-y-4">
+          <p class="text-xs font-mono uppercase tracking-[0.25em] text-[#781926] font-semibold">OUR CUSTOMERS</p>
+          <h1 class="font-serif-luxury text-4xl sm:text-5xl text-[#21191B] font-bold">
+            Real People,<br>
+            <span class="text-[#781926] italic font-normal">Real Moments ♡</span>
+          </h1>
+          <p class="text-sm text-[#615658] leading-relaxed">
+            From everyday wear to special occasions, here's what our lovely customers have to say about Aivra.
+          </p>
+          <button data-nav-btn="collections" class="btn-wine px-7 py-3 rounded-full font-mono text-xs uppercase tracking-wider font-semibold">
+            Shop Our Collection →
+          </button>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-xl border border-[#781926]/15">
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1200&q=85" alt="Customer Love" class="w-full h-full object-cover" />
+            <div class="absolute bottom-4 right-4 px-4 py-2 rounded-xl bg-white/80 backdrop-blur-md text-[#781926] font-serif italic text-xs shadow-md">
+              Different Stories, Same Sparkle ♡
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ratings Summary Bar (Exact from Screenshot 5) -->
+      <div class="mt-12 p-6 md:p-8 rounded-3xl bg-white border border-[#781926]/12 shadow-sm grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+        <div class="md:col-span-4 border-b md:border-b-0 md:border-r border-[#781926]/10 pb-4 md:pb-0 md:pr-6">
+          <p class="text-xs font-mono text-[#615658] font-bold uppercase tracking-wider">Loved by 1,900+ Customers</p>
+          <div class="flex items-baseline gap-3 mt-1">
+            <span class="text-5xl font-serif-luxury font-bold text-[#781926]">4.8</span>
+            <div>
+              <div class="text-[#D4AF37] text-sm tracking-wide">★★★★★</div>
+              <p class="text-[11px] text-[#615658]">Based on 1,900+ reviews</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+          <div class="space-y-1">
+            <span class="text-xl font-mono font-bold text-[#21191B]">95%</span>
+            <p class="text-[10px] text-[#615658]">Would recommend</p>
+          </div>
+          <div class="space-y-1">
+            <span class="text-xl font-mono font-bold text-[#21191B]">4.8/5</span>
+            <p class="text-[10px] text-[#615658]">Product quality</p>
+          </div>
+          <div class="space-y-1">
+            <span class="text-xl font-mono font-bold text-[#21191B]">4.7/5</span>
+            <p class="text-[10px] text-[#615658]">Packaging & Delivery</p>
+          </div>
+          <div class="space-y-1">
+            <span class="text-xl font-mono font-bold text-[#21191B]">4.8/5</span>
+            <p class="text-[10px] text-[#615658]">Overall Experience</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Review Filter Pills & Review Cards Grid (Exact 5 Reviews from Screenshot 5) -->
+    <section class="py-8 px-4 md:px-8 max-w-7xl mx-auto">
+      <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+        <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
+          <button class="px-4 py-1.5 rounded-full bg-[#781926] text-white font-bold">All Reviews</button>
+          <button class="px-4 py-1.5 rounded-full bg-white text-[#615658] border border-[#781926]/15 hover:border-[#781926]">Product Quality</button>
+          <button class="px-4 py-1.5 rounded-full bg-white text-[#615658] border border-[#781926]/15 hover:border-[#781926]">Packaging</button>
+          <button class="px-4 py-1.5 rounded-full bg-white text-[#615658] border border-[#781926]/15 hover:border-[#781926]">Delivery</button>
+          <button class="px-4 py-1.5 rounded-full bg-white text-[#615658] border border-[#781926]/15 hover:border-[#781926]">Gifting</button>
+          <button class="px-4 py-1.5 rounded-full bg-white text-[#615658] border border-[#781926]/15 hover:border-[#781926]">Designs</button>
+        </div>
+        <div class="text-xs font-mono text-[#615658]">
+          Sort by: <span class="font-bold text-[#21191B]">Most Recent ⌵</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        
+        <!-- Review 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#781926]/10 shadow-sm p-4 space-y-3 flex flex-col justify-between">
+          <div class="aspect-square rounded-xl overflow-hidden bg-[#F5EAE1]">
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=400&q=80" alt="Customer photo 1" class="w-full h-full object-cover" />
+          </div>
+          <div class="space-y-2">
+            <div class="text-[#D4AF37] text-xs">★★★★★</div>
+            <p class="text-xs text-[#615658] line-clamp-3">"Absolutely love the quality and the design! It's so delicate and perfect for everyday wear. ♡"</p>
+            <p class="text-xs font-bold text-[#21191B]">Riya S. <span class="text-[#781926] text-[10px]">✓</span></p>
+          </div>
+          <div class="pt-2 border-t border-black/5">
+            <span class="text-[10px] font-mono text-[#781926] bg-[#F8ECEE] px-2 py-0.5 rounded-full block truncate">Heart Pendant Necklace</span>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#781926]/10 shadow-sm p-4 space-y-3 flex flex-col justify-between">
+          <div class="aspect-square rounded-xl overflow-hidden bg-[#F5EAE1]">
+            <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=400&q=80" alt="Customer photo 2" class="w-full h-full object-cover" />
+          </div>
+          <div class="space-y-2">
+            <div class="text-[#D4AF37] text-xs">★★★★★</div>
+            <p class="text-xs text-[#615658] line-clamp-3">"Super cute earrings! Lightweight and very comfortable. Got so many compliments! ♡"</p>
+            <p class="text-xs font-bold text-[#21191B]">Manya K. <span class="text-[#781926] text-[10px]">✓</span></p>
+          </div>
+          <div class="pt-2 border-t border-black/5">
+            <span class="text-[10px] font-mono text-[#781926] bg-[#F8ECEE] px-2 py-0.5 rounded-full block truncate">Floral Drop Earrings</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#781926]/10 shadow-sm p-4 space-y-3 flex flex-col justify-between">
+          <div class="aspect-square rounded-xl overflow-hidden bg-[#F5EAE1]">
+            <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=400&q=80" alt="Customer photo 3" class="w-full h-full object-cover" />
+          </div>
+          <div class="space-y-2">
+            <div class="text-[#D4AF37] text-xs">★★★★★</div>
+            <p class="text-xs text-[#615658] line-clamp-3">"Really pretty and minimal. The finishing is amazing. Will definitely shop again! ♡"</p>
+            <p class="text-xs font-bold text-[#21191B]">Tanvi P. <span class="text-[#781926] text-[10px]">✓</span></p>
+          </div>
+          <div class="pt-2 border-t border-black/5">
+            <span class="text-[10px] font-mono text-[#781926] bg-[#F8ECEE] px-2 py-0.5 rounded-full block truncate">Charm Bracelet</span>
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#781926]/10 shadow-sm p-4 space-y-3 flex flex-col justify-between">
+          <div class="aspect-square rounded-xl overflow-hidden bg-[#F5EAE1]">
+            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=400&q=80" alt="Customer photo 4" class="w-full h-full object-cover" />
+          </div>
+          <div class="space-y-2">
+            <div class="text-[#D4AF37] text-xs">★★★★★</div>
+            <p class="text-xs text-[#615658] line-clamp-3">"Beautiful pieces and such thoughtful packaging. Felt so special opening it! Highly recommend. ♡"</p>
+            <p class="text-xs font-bold text-[#21191B]">Sneha G. <span class="text-[#781926] text-[10px]">✓</span></p>
+          </div>
+          <div class="pt-2 border-t border-black/5">
+            <span class="text-[10px] font-mono text-[#781926] bg-[#F8ECEE] px-2 py-0.5 rounded-full block truncate">Pearl Charm Bracelet</span>
+          </div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#781926]/10 shadow-sm p-4 space-y-3 flex flex-col justify-between">
+          <div class="aspect-square rounded-xl overflow-hidden bg-[#F5EAE1]">
+            <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=400&q=80" alt="Customer photo 5" class="w-full h-full object-cover" />
+          </div>
+          <div class="space-y-2">
+            <div class="text-[#D4AF37] text-xs">★★★★★</div>
+            <p class="text-xs text-[#615658] line-clamp-3">"Ordered this as a gift and it was perfect! The packaging is so cute and elegant. ♡"</p>
+            <p class="text-xs font-bold text-[#21191B]">Karan M. <span class="text-[#781926] text-[10px]">✓</span></p>
+          </div>
+          <div class="pt-2 border-t border-black/5">
+            <span class="text-[10px] font-mono text-[#781926] bg-[#F8ECEE] px-2 py-0.5 rounded-full block truncate">Gift Box</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Video Reviews Section (Customer Reels Carousel from Screenshot 5) -->
+    <section class="py-12 px-4 md:px-8 max-w-7xl mx-auto border-t border-[#781926]/10">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2 class="font-serif-luxury text-2xl md:text-3xl font-bold text-[#21191B]">Video Reviews</h2>
+          <p class="text-xs text-[#615658]">Hear it straight from our customers ♡</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button class="w-8 h-8 rounded-full bg-white border border-[#781926]/20 text-[#781926] flex items-center justify-center text-xs shadow-sm">‹</button>
+          <button class="w-8 h-8 rounded-full bg-white border border-[#781926]/20 text-[#781926] flex items-center justify-center text-xs shadow-sm">›</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+        <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-md group cursor-pointer bg-black">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Video Review 1" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+            <div class="w-10 h-10 rounded-full bg-white/80 text-[#781926] flex items-center justify-center text-sm shadow-md">▶</div>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white text-[11px] font-mono truncate">Unboxing Pink Velvet Box ✨</div>
+        </div>
+
+        <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-md group cursor-pointer bg-black">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Video Review 2" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+            <div class="w-10 h-10 rounded-full bg-white/80 text-[#781926] flex items-center justify-center text-sm shadow-md">▶</div>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white text-[11px] font-mono truncate">Floral Earrings Try-On ♡</div>
+        </div>
+
+        <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-md group cursor-pointer bg-black">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" alt="Video Review 3" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+            <div class="w-10 h-10 rounded-full bg-white/80 text-[#781926] flex items-center justify-center text-sm shadow-md">▶</div>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white text-[11px] font-mono truncate">Layered Choker Review ✨</div>
+        </div>
+
+        <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-md group cursor-pointer bg-black">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Video Review 4" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+            <div class="w-10 h-10 rounded-full bg-white/80 text-[#781926] flex items-center justify-center text-sm shadow-md">▶</div>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white text-[11px] font-mono truncate">Gifted to my Sister ♡</div>
+        </div>
+
+        <div class="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-md group cursor-pointer bg-black">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80" alt="Video Review 5" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+            <div class="w-10 h-10 rounded-full bg-white/80 text-[#781926] flex items-center justify-center text-sm shadow-md">▶</div>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 text-white text-[11px] font-mono truncate">Waterproof Test in Goa ✨</div>
+        </div>
+      </div>
+
+      <!-- Share Your Aivra Story CTA Banner (Exact from Screenshot 5) -->
+      <div class="mt-12 p-8 rounded-3xl bg-[#F8ECEE] border border-[#781926]/15 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+        <div>
+          <h3 class="font-serif-luxury text-2xl font-bold text-[#21191B]">Share Your Aivra Story</h3>
+          <p class="text-xs text-[#615658] mt-1 max-w-md">We'd love to hear from you! Share your experience and help others discover their next favourite piece.</p>
+        </div>
+        <button class="btn-wine px-7 py-3 rounded-full font-mono text-xs uppercase tracking-wider font-semibold shrink-0">
+          Write a Review →
+        </button>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- NEWSLETTER SIGNUP BANNER (Exact from Screenshots) -->
+  <!-- ========================================================================= -->
+  <section class="py-12 px-4 md:px-8 bg-[#F8ECEE] border-t border-[#781926]/10">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <h3 class="font-serif-luxury text-2xl font-bold text-[#21191B]">Be the First to Know</h3>
+        <p class="text-xs text-[#615658] mt-1">New launches, exclusive offers and more ✨</p>
+      </div>
+      <div class="flex items-center gap-2 w-full md:w-auto">
+        <input type="email" placeholder="Enter your email" class="px-5 py-3 rounded-full bg-white border border-[#781926]/20 text-xs font-mono text-[#21191B] outline-none w-full md:w-72 focus:border-[#781926]" />
+        <button class="btn-wine px-6 py-3 rounded-full font-mono text-xs uppercase font-bold tracking-wider shrink-0">
+          Subscribe
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER (Exact from Screenshots) -->
+  <!-- ========================================================================= -->
+  <footer class="py-16 px-4 md:px-8 bg-[#FBF6F0] border-t border-[#781926]/10 text-xs font-mono">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      
+      <!-- Brand column -->
+      <div class="space-y-3">
+        <span class="font-serif-luxury text-2xl font-bold tracking-wider text-[#21191B]">aivra.co</span>
+        <p class="text-[#615658] text-xs">Made to Shine, Just Like You ✨</p>
+      </div>
+
+      <!-- Quick links -->
+      <div class="space-y-2 text-[#615658]">
+        <p class="font-bold text-[#21191B] uppercase tracking-wider mb-3">Quick Links</p>
+        <p><button data-nav-btn="home" class="hover:text-[#781926]">Home</button></p>
+        <p><button data-nav-btn="collections" class="hover:text-[#781926]">Shop</button></p>
+        <p><button data-nav-btn="collections" class="hover:text-[#781926]">Collections</button></p>
+        <p><button data-nav-btn="about" class="hover:text-[#781926]">About</button></p>
+        <p><button data-nav-btn="reviews" class="hover:text-[#781926]">Reviews</button></p>
+      </div>
+
+      <!-- Customer Care -->
+      <div class="space-y-2 text-[#615658]">
+        <p class="font-bold text-[#21191B] uppercase tracking-wider mb-3">Customer Care</p>
+        <p><a href="#" class="hover:text-[#781926]">Shipping</a></p>
+        <p><a href="#" class="hover:text-[#781926]">Returns & Exchange</a></p>
+        <p><a href="#" class="hover:text-[#781926]">FAQs</a></p>
+        <p><a href="#" class="hover:text-[#781926]">Contact Us</a></p>
+      </div>
+
+      <!-- Follow Us -->
+      <div class="space-y-3 text-[#615658]">
+        <p class="font-bold text-[#21191B] uppercase tracking-wider mb-3">Follow Us</p>
+        <div class="flex items-center gap-3">
+          <a href="https://instagram.com/aivra.co" target="_blank" class="w-8 h-8 rounded-full bg-white border border-[#781926]/15 flex items-center justify-center text-[#781926] shadow-sm hover:bg-[#781926] hover:text-white transition-all">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://wa.me/?text=Hi%20Aivra" target="_blank" class="w-8 h-8 rounded-full bg-white border border-[#781926]/15 flex items-center justify-center text-[#781926] shadow-sm hover:bg-[#781926] hover:text-white transition-all">
+            💬
+          </a>
+        </div>
+        <p class="text-[11px] text-[#781926] font-bold pt-2">📦 Shipping All Over Goa</p>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-[#781926]/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[#8E8284] text-[11px]">
+      <p>© 2026 Aivra Jewels. All rights reserved.</p>
+      <p>Made with ♡ in Goa</p>
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- SAZE-STYLE INSTAGRAM DM CHECKOUT DRAWER (@aivra.co) -->
+  <!-- ========================================================================= -->
+  <div id="cart-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[9990] hidden opacity-0 transition-opacity duration-300"></div>
+
+  <div id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-[#FBF6F0] border-l border-[#781926]/15 z-[9995] shadow-2xl backdrop-blur-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between">
+    
+    <!-- Drawer Header -->
+    <div class="p-6 border-b border-[#781926]/10 flex items-center justify-between bg-white/70">
+      <div class="flex items-center gap-3">
+        <span class="w-2.5 h-2.5 rounded-full bg-[#781926] animate-pulse"></span>
+        <h3 class="font-serif-luxury text-lg text-[#21191B] font-bold tracking-wide">Concierge Bag</h3>
+        <span class="px-2 py-0.5 rounded-full bg-[#781926]/10 text-[10px] font-mono text-[#781926] font-semibold">REF: <span id="cart-ref-code">#AIV-0000</span></span>
+      </div>
+      <button id="cart-close" class="p-2 text-[#615658] hover:text-[#21191B] rounded-lg hover:bg-black/5 transition-all">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Drawer Line Items -->
+    <div id="cart-items" class="p-6 flex-1 overflow-y-auto space-y-4">
+      <!-- Injected by app.js -->
+    </div>
+
+    <!-- Instagram DM Checkout Footer (Saze Model) -->
+    <div class="p-6 border-t border-[#781926]/10 bg-white space-y-4 shadow-lg">
+      
+      <!-- Subtotal -->
+      <div class="flex items-center justify-between font-mono text-sm">
+        <span class="text-[#615658]">Estimated Total:</span>
+        <span id="cart-subtotal" class="text-xl font-bold text-[#781926]">₹0</span>
+      </div>
+
+      <!-- Pre-formatted Instagram DM Preview Box -->
+      <div class="rounded-xl bg-[#F5EAE1] border border-[#781926]/15 p-3.5 space-y-2">
+        <div class="flex items-center justify-between text-[11px] font-mono text-[#781926] font-bold">
+          <span>INSTAGRAM DM PAYLOAD PREVIEW</span>
+          <span class="text-[#615658]">Target: @aivra.co</span>
+        </div>
+        <pre id="order-message-preview" class="text-[10px] font-mono text-[#21191B] max-h-24 overflow-y-auto whitespace-pre-wrap leading-tight bg-white p-2.5 rounded-lg border border-[#781926]/10"></pre>
+      </div>
+
+      <!-- Main Saze-Style Action: Checkout via Instagram DM -->
+      <button id="ig-checkout-btn" class="w-full btn-wine py-4 px-4 rounded-xl font-mono text-xs uppercase font-bold tracking-widest flex items-center justify-center gap-2 shadow-xl">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <span>SEND ORDER TO @AIVRA.CO (DM) →</span>
+      </button>
+
+      <!-- Secondary: One-Click Copy -->
+      <button id="copy-order-summary-btn" class="w-full py-2.5 px-3 rounded-xl bg-[#F5EAE1] hover:bg-[#ECE0D6] text-[#21191B] font-mono text-[11px] uppercase tracking-wider border border-[#781926]/15 transition-all flex items-center justify-center gap-1.5 font-semibold">
+        <svg class="w-3.5 h-3.5 text-[#781926]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+        <span>Copy Order Summary (Clipboard)</span>
+      </button>
+
+      <p class="text-[10px] text-[#8E8284] text-center font-mono">
+        Clicking copies your order sheet and launches your Instagram DM thread with @aivra.co directly.
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- Custom Javascript Engine -->
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Warm Alabaster & Cream Canvas from Figma */
+  --bg-canvas: #FBF6F0;
+  --bg-surface: #F5EAE1;
+  --bg-card: #FFFFFF;
+  --bg-card-subtle: rgba(255, 255, 255, 0.7);
+  
+  /* Bordeaux Wine & Velvet Accents */
+  --wine-primary: #781926;
+  --wine-hover: #5E111C;
+  --wine-subtle: rgba(120, 25, 38, 0.08);
+  --wine-border: rgba(120, 25, 38, 0.18);
+  
+  /* Champagne Gold */
+  --gold-primary: #C5A059;
+  --gold-light: #E8D3A7;
+  --gold-dark: #8C6A28;
+  --gold-border: rgba(197, 160, 89, 0.3);
+
+  /* Deep Ink & Truffle Typography */
+  --text-main: #21191B;
+  --text-body: #615658;
+  --text-muted: #8E8284;
+
+  /* Borders & Hairlines */
+  --border-light: rgba(120, 25, 38, 0.1);
+  --border-card: rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-main);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+  selection-background-color: var(--wine-primary);
+  selection-color: #FFFFFF;
+}
+
+.font-serif-luxury {
+  font-family: 'Cinzel', serif;
+}
+
+.font-mono-tech {
+  font-family: 'Space Grotesk', monospace;
+}
+
+/* Subtle editorial film grain */
+.film-grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Warm ambient lighting orbs */
+.ambient-glow-rose {
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(120, 25, 38, 0.07) 0%, rgba(244, 235, 227, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambient-glow-gold {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(197, 160, 89, 0.12) 0%, rgba(251, 246, 240, 0) 70%);
+  filter: blur(70px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Warm Caustic Spotlight for jewelry hover */
+.spotlight-caustic {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 211, 167, 0.45) 0%, rgba(120, 25, 38, 0.06) 45%, transparent 70%);
+  filter: blur(35px);
+  pointer-events: none;
+  transition: transform 0.15s ease-out;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+/* Glassmorphism Panels in Warm Alabaster */
+.glass-panel-warm {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(120, 25, 38, 0.1);
+  box-shadow: 0 10px 30px -10px rgba(120, 25, 38, 0.05);
+}
+
+.glass-panel-wine {
+  background: rgba(120, 25, 38, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 35px -5px rgba(120, 25, 38, 0.25);
+}
+
+/* Elegant Wine Velvet Button */
+.btn-wine {
+  background-color: var(--wine-primary);
+  color: #FFFFFF;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-wine:hover {
+  background-color: var(--wine-hover);
+  box-shadow: 0 8px 25px rgba(120, 25, 38, 0.28);
+  transform: translateY(-1px);
+}
+
+/* Elegant Gold Shimmer Button */
+@keyframes warmShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.btn-shimmer-warm {
+  background: linear-gradient(90deg, #781926 0%, #A22435 50%, #781926 100%);
+  background-size: 200% auto;
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.btn-shimmer-warm:hover {
+  animation: warmShimmer 2.5s infinite linear;
+  box-shadow: 0 10px 30px rgba(120, 25, 38, 0.35);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 25, 38, 0.2);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 25, 38, 0.45);
+}
